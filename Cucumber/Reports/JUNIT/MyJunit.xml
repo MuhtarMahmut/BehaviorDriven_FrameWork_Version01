@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="4.352045">
+<testcase classname="Google search" name="simple searcg" time="4.352045">
+<system-out><![CDATA[Then Enter Apple............................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

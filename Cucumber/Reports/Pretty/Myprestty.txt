@@ -1,0 +1,6 @@
+@Muhtar
+Feature: Google search
+
+  @Muhtar
+  Scenario: simple searcg [90m# Cucumber/Features/GoogleSearch:5[0m
+    [32mThen [0m[32mEnter Apple[0m      [90m# class1.enter_Apple()[0m
