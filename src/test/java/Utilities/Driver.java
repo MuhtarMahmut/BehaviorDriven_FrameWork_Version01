@@ -7,47 +7,47 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-      enum AvailabeBrowsers{
 
-             Chrome , FireFox, IE, Edge
+enum AvailabeBrowsers{
 
-        }
+    Chrome, FireFox, IE, Edge,
+
+}
 
 
- public class Driver extends TestBase {
+public interface Driver  {
 
-    private Driver(){   }
+    WebDriver newdriver = getDriver();
 
-    public static WebDriver getDriver(){
-        WebDriver driver=null;
+    static WebDriver getDriver(){
+
         String Browser = FileReader.getPropertiesData("Browser").toLowerCase();       // from propertiesfile
         //   String Browser = FileReader.getExcelData(2,2).toLowerCase();                 // from excel
 
-        AvailabeBrowsers names = (Browser.equals("firefox"))? AvailabeBrowsers.FireFox : (Browser.equals("chrome")) ? AvailabeBrowsers.Chrome : (Browser.equals("ie")) ? AvailabeBrowsers.IE
-                                    : (Browser.equals("Edge"))?AvailabeBrowsers.Edge: null ;
+        AvailabeBrowsers names = (Browser.equals("firefox"))? AvailabeBrowsers.FireFox : (Browser.equals("chrome")) ? AvailabeBrowsers.Chrome :
+                (Browser.equals("ie")) ? AvailabeBrowsers.IE : (Browser.equals("Edge"))?AvailabeBrowsers.Edge: null ;
 
         switch (names){
-
             case Chrome:  WebDriverManager.chromedriver().setup();
-                            driver = new ChromeDriver();
-                            break;
+                TestBase.driver = new ChromeDriver();
+                break;
 
             case IE:    WebDriverManager.iedriver().setup();
-                        driver = new InternetExplorerDriver();
-                        break;
+                TestBase.driver = new InternetExplorerDriver();
+                break;
 
             case FireFox:   WebDriverManager.firefoxdriver().setup();
-                            driver =  new FirefoxDriver();
-                            break;
+                TestBase.driver =  new FirefoxDriver();
+                break;
 
             case Edge:  WebDriverManager.edgedriver().setup();
-                        driver = new EdgeDriver();
-                        break;
+                TestBase.driver = new EdgeDriver();
+                break;
 
         }
 
 
-        return driver;
+        return TestBase.driver;
     }
 
 

@@ -2,5 +2,9 @@
 Feature: Google search
 
   @Muhtar
-  Scenario: simple searcg [90m# Cucumber/Features/GoogleSearch:5[0m
-    [32mThen [0m[32mEnter Apple[0m      [90m# class1.enter_Apple()[0m
+  Scenario: simple searcg [90m# Cucumber/Features/GoogleSearch.feature:5[0m
+    [31mThen [0m[31mEnter Apple[0m      [90m# class1.enter_Apple()[0m
+      [31mjava.lang.NullPointerException
+	at Step_Definition.class1.enter_Apple(class1.java:17)
+	at ✽.Enter Apple(Cucumber/Features/GoogleSearch.feature:6)
+[0m

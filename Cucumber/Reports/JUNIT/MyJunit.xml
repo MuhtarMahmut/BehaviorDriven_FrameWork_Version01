@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="4.352045">
-<testcase classname="Google search" name="simple searcg" time="4.352045">
-<system-out><![CDATA[Then Enter Apple............................................................passed
-]]></system-out>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.009083">
+<testcase classname="Google search" name="simple searcg" time="0.009083">
+<failure message="java.lang.NullPointerException&#10;&#9;at Step_Definition.class1.enter_Apple(class1.java:17)&#10;&#9;at ✽.Enter Apple(Cucumber/Features/GoogleSearch.feature:6)&#10;"><![CDATA[Then Enter Apple............................................................failed
+
+StackTrace:
+java.lang.NullPointerException
+	at Step_Definition.class1.enter_Apple(class1.java:17)
+	at ✽.Enter Apple(Cucumber/Features/GoogleSearch.feature:6)
+]]></failure>
 </testcase>
 </testsuite>

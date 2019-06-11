@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-       features = "Cucumber/Features/GoogleSearch",
+       features = "Cucumber/Features/GoogleSearch.feature",
         glue = "Step_Definition",
         dryRun = false,
       //  tags = "";

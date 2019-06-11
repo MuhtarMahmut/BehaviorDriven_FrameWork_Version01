@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 
-public abstract class TestBase implements BrowseUtils {
+public abstract class TestBase implements Driver {
 
     // main variables we use in everysingle tests:
     protected  static WebDriver driver;
@@ -22,8 +22,8 @@ public abstract class TestBase implements BrowseUtils {
 
 
 
-    protected static void BeforeScenario(){
-        driver = Driver.getDriver();
+    public static void BeforeScenario(){
+        driver = newdriver;
         wait = new WebDriverWait(driver,10);
         act = new Actions(driver);
         driver.manage().window().maximize();
@@ -35,7 +35,7 @@ public abstract class TestBase implements BrowseUtils {
         new AllPagefactoeirs();   //
     }
 
-    protected static void AfterScenario(Scenario result){
+    public static void AfterScenario(Scenario result){
 
         if( result.isFailed() )
             result.embed( ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES) ,"image/png" );
